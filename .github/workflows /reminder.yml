@@ -3,7 +3,7 @@ name: Discord Reminder
 on:
   schedule:
     - cron: '57 6,9,12,15,18,21 * * *'
-    - cron: '27 8,11,14,17,20 * * *'   
+    - cron: '27 8,11,14,17,20 * * *'
   workflow_dispatch:
 
 jobs:

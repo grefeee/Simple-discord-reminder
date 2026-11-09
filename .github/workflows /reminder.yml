@@ -1,0 +1,18 @@
+name: Discord Reminder
+
+on:
+  schedule:
+    - cron: '57 6,9,12,15,18,21 * * *'
+    - cron: '27 8,11,14,17,20 * * *'   
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reminder
+        run: |
+          curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d '{"content":"<@&1569034259014881291>"}' \
+            "${{ secrets.WEBHOOK_URL }}"   
